@@ -18,7 +18,7 @@ const fetchData = async () => {
 <template>
 	<div>
 		<h1 class="text-3xl mb-3">Info Site</h1>
-		<img src="/jobs.png" class="w-[24rem] rounded-lg mb-3" />
+		<img src="/jobs.png" class="w-[24rem] rounded-lg" />
 		<button @click="fetchData" class="mb-3">fetch data</button>
 		<h2 class="text-xl mb-3" v-if="jobs.length > 0">
 			checked = React ({{ numberOfReactJobs }})
@@ -34,3 +34,11 @@ const fetchData = async () => {
 		</ul>
 	</div>
 </template>
+
+<style lang="scss">
+$main_color: orange;
+
+h1 {
+	color: $main_color;
+}
+</style>

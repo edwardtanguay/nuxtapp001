@@ -11,3 +11,10 @@
 		@apply bg-slate-700 text-slate-300 px-2 py-1 rounded;
 	}
 }
+
+body {
+	img {
+		box-shadow: 5px 5px 5px #555;
+		margin-bottom: 1.5rem;
+	}
+}
