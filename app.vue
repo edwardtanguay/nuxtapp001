@@ -23,7 +23,7 @@ const fetchData = async () => {
 		<h2 class="text-xl mb-3" v-if="jobs.length > 0">
 			checked = React ({{ numberOfReactJobs }})
 		</h2>
-		<ul>
+		<ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
 			<li v-for="job in jobs" :key="job.id">
 				<input
 					type="checkbox"
