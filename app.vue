@@ -1,5 +1,4 @@
 <script setup>
-import Jobs from './components/Jobs';
 </script>
 
 <template>

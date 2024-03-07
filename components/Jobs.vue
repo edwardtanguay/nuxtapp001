@@ -1,6 +1,5 @@
 <script setup>
 import axios from "axios";
-import Job from './Job';
 
 let jobs = ref([]);
 
@@ -23,7 +22,25 @@ const fetchData = async () => {
 	</h2>
 	<ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
 		<li v-for="job in jobs" :key="job.id">
-		<Job :job="job"/>
+			<Job :job="job">
+				<template #before>
+					<div class="font-bold">Info Area:</div>
+				</template>
+				<template #after>
+					<div
+						v-if="job.skillList.includes('react')"
+						class="text-red-700"
+					>
+						job requires React
+					</div>
+					<div
+						v-if="!job.skillList.includes('react')"
+						class="italic text-blue-900"
+					>
+						no React necessary
+					</div>
+				</template>
+			</Job>
 		</li>
 	</ul>
 </template>
