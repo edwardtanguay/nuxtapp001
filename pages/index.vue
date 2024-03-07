@@ -1,9 +1,9 @@
-<script setup>
-	
-</script>
+<script setup></script>
 
 <template>
-	<h1>New Info Site</h1>
-	<p>new site will appear here</p>
-	<Jobs/>
+	<NuxtLayout>
+		<h1>New Info Site</h1>
+		<p>new site will appear here</p>
+		<Jobs />
+	</NuxtLayout>
 </template>
