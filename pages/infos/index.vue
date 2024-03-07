@@ -1,6 +1,9 @@
 <script setup>
 const route = useRoute();
-console.log(route.query);
+useHead({
+	title: "The Single Infos Page",
+	description: "the description",
+});
 </script>
 
 <template>
