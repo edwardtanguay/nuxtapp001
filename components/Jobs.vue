@@ -13,6 +13,10 @@ const fetchData = async () => {
 	);
 	jobs.value = response.data;
 };
+
+// onMounted(() => {
+// 	alert("loading...");
+// });
 </script>
 
 <template>
