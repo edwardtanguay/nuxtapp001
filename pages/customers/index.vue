@@ -2,7 +2,7 @@
 const { pending, data: products } = await useFetch(
 	"https://fakestoreapi.com/products",
 	{
-		lazy: false,
+		lazy: true,
 	}
 );
 </script>
