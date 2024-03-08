@@ -1,9 +1,9 @@
 <script setup>
 const route = useRoute();
-useHead({
-	title: "The Single Infos Page",
-	description: "the description",
-});
+// useHead({
+// 	title: "The Single Infos Page",
+// 	description: "the description",
+// });
 </script>
 
 <template>

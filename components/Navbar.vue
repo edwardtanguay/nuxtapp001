@@ -5,6 +5,7 @@
 		<li><NuxtLink to="/">Home</NuxtLink></li>
 		<li><NuxtLink to="/infos">Infos</NuxtLink></li>
 		<li><NuxtLink to="/users">Users</NuxtLink></li>
+		<li><NuxtLink to="/customers">Customers</NuxtLink></li>
 	</ul>
 </template>
 
