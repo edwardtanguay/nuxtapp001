@@ -1,15 +1,14 @@
-<script setup>
-	
-</script>
+<script setup></script>
 
 <template>
+	<!-- <NuxtLoadingIndicator /> -->
 	<Html>
 		<Head>
-		<Title>Info Site</Title>
+			<Title>Info Site</Title>
 		</Head>
 	</Html>
-	<Navbar/>
-	<NuxtPage/>
+	<Navbar />
+	<NuxtPage />
 </template>
 
 <style scoped></style>
