@@ -2,34 +2,35 @@
 // const { pending, data: products } = await useFetch( // also works
 
 // const { pending, data: products } = useFetch(
-// 	"https://fakestoreapi.com/products",
+// 	"https://fakestoreapi.com/products/1",
 // 	{
-// 		lazy: true,
-// 		transform: (products) => {
-// 			return products.map(product => ({
-// 				id: product.id,
-// 				title: product.title,
-// 				image: product.image
-// 			}));
-// 		}
+// 		lazy: false,
+// 		pick: ["id", "image", "title"],
 // 	}
 // );
 
-const { pending, data: products } = useFetch(
-	"https://fakestoreapi.com/products/1",
-	{
-		lazy: false,
-		pick: ["id", "image", "title"],
-	}
-);
+const {
+	pending,
+	data: products,
+	refresh,
+} = useFetch("https://fakestoreapi.com/products", {
+	lazy: true,
+	transform: (products) => {
+		return products.map((product) => ({
+			id: product.id,
+			title: product.title,
+			image: product.image,
+		}));
+	},
+});
 </script>
 
 <template>
-	<div>{{ pending }}</div>
 	<div v-if="pending">
 		<p>Loading...</p>
 	</div>
 	<div v-else>
+		<button @click="refresh">refresh data</button>
 		<h2 class="text-xl mb-3 mt-6">{{ products.length }} products</h2>
 		<ul>
 			<li
