@@ -1,8 +1,25 @@
 <script setup>
-const { pending, data: products } = await useFetch(
-	"https://fakestoreapi.com/products",
+// const { pending, data: products } = await useFetch( // also works
+
+// const { pending, data: products } = useFetch(
+// 	"https://fakestoreapi.com/products",
+// 	{
+// 		lazy: true,
+// 		transform: (products) => {
+// 			return products.map(product => ({
+// 				id: product.id,
+// 				title: product.title,
+// 				image: product.image
+// 			}));
+// 		}
+// 	}
+// );
+
+const { pending, data: products } = useFetch(
+	"https://fakestoreapi.com/products/1",
 	{
-		lazy: true,
+		lazy: false,
+		pick: ["id", "image", "title"],
 	}
 );
 </script>
